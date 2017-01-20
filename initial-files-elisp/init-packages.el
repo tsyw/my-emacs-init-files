@@ -19,6 +19,7 @@
                        smartparens
                        exec-path-from-shell
                        cdlatex
+                       popwin
                        ) "Default packages")
 (setq package-selected-packages tsyw/packages)
 (defun tsyw/packages-installed-p ()
@@ -54,5 +55,9 @@
 
 ;;smartparens
 (smartparens-global-mode t)
+
+;;popwin
+(require 'popwin)
+(popwin-mode 1)
 
 (provide 'init-packages)
