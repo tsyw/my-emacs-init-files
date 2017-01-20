@@ -11,10 +11,10 @@
 (require 'init-packages)
 (require 'init-org)
 (require 'init-selfDefault)
-(require 'init-keybindings)
 (require 'init-latex)
 (require 'init-theme)
 (require 'init-c-style-indent)
+(require 'init-keybindings)
 
 ;;customize(auto-settings)
 (setq custom-file (expand-file-name "initial-files-elisp/custom.el" user-emacs-directory))
