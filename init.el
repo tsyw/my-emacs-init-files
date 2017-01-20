@@ -1,53 +1,31 @@
 ;; Added by Package.el.  This must come before configurations of
 ;; installed packages.  Don't delete this line.  If you don't want it,
 ;; just comment it out by adding a semicolon to the start of the line.
-(require 'package) ;; You might already have this line
-(add-to-list 'package-archives
-             '("melpa" . "http://mirrors.tuna.tsinghua.edu.cn/elpa/melpa/"))
-(when (< emacs-major-version 24)
-  ;; For important compatibility libraries like cl-lib
-  (add-to-list 'package-archives '("gnu" . "http://mirrors.tuna.tsinghua.edu.cn/elpa/gnu/")))
-(package-initialize)
-(require 'cl)
-(defvar tsyw/packages '(
-                       company
-                       yasnippet
-                       org
-                       auctex
-                       monokai-theme
-                       hungry-delete
-                       counsel
-                       swiper
-                       smartparens
-                       js2-mode
-                       exec-path-from-shell
-                       ) "Default packages")
-(setq package-selected-packages tsyw/packages)
-(defun tsyw/packages-installed-p ()
-  (loop for pkg in tsyw/packages
-        when (not (package-installed-p pkg)) do (return nil)
-        finally (return t)))
-(unless (tsyw/packages-installed-p)
-  (message "%s" "Refreshing package database...")
-  (package-refresh-contents)
-  (dolist (pkg tsyw/packages)
-    (when (not (package-installed-p pkg))
-      (package-install pkg))))
+;; You might already have this line
 
-;;path setting
+;;initial files' directory setting
+
+;; Added by Package.el.  This must come before configurations of
+;; installed packages.  Don't delete this line.  If you don't want it,
+;; just comment it out by adding a semicolon to the start of the line.
+;; You may delete these explanatory comments.
+(package-initialize)
+
+(add-to-list 'load-path "~/.emacs.d/initial-files-elisp")
+
+;;initial files
+(require 'init-packages)
+
+;;initial exec-path for macOS
 (when (memq window-system '(mac ns))
   (exec-path-from-shell-initialize))
 
-;;packages required
-(require 'cdlatex)
-(require 'hungry-delete)
-(require 'smartparens-config)
-
-;;org
+;;org-agenda files' directory
 (setq org-agenda-files '("~/工作/gtd"))
 (global-set-key (kbd "C-c a") 'org-agenda)
 
 ;;common settings
+(setq ring-bell-function 'ignore)
 (tool-bar-mode -1)
 (global-linum-mode t)
 (global-company-mode t)
@@ -56,6 +34,7 @@
 (global-hl-line-mode 1)
 (load-theme 'monokai t)
 (global-hungry-delete-mode)
+(global-auto-revert-mode t)
 
 ;;swiper
 (ivy-mode 1)
