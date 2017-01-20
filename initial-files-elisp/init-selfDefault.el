@@ -1,6 +1,8 @@
 ;;common self settings
 (setq ring-bell-function 'ignore)
 (global-linum-mode t)
+(column-number-mode t)
+(display-time-mode t)
 (delete-selection-mode 1)
 (global-auto-revert-mode t)
 (setq make-backup-files nil)
