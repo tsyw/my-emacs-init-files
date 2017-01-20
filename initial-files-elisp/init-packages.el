@@ -17,7 +17,6 @@
                        counsel
                        swiper
                        smartparens
-                       js2-mode
                        exec-path-from-shell
                        cdlatex
                        ) "Default packages")
@@ -55,10 +54,5 @@
 
 ;;smartparens
 (smartparens-global-mode t)
-
-;;js2-mode
-(add-to-list 'auto-mode-alist '("\\.js\\'" . js2-mode))
-(add-to-list 'auto-mode-alist '("\\.jsx?\\'" . js2-jsx-mode))
-(add-to-list 'interpreter-mode-alist '("node" . js2-jsx-mode))
 
 (provide 'init-packages)
