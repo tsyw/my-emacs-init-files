@@ -1,3 +1,4 @@
+;;package source and auto-install missing packages
 (require 'package) 
 (add-to-list 'package-archives
              '("melpa" . "http://mirrors.tuna.tsinghua.edu.cn/elpa/melpa/"))
@@ -32,7 +33,32 @@
     (when (not (package-installed-p pkg))
       (package-install pkg))))
 
+;;initial exec-path for macOS
+(when (memq window-system '(mac ns))
+  (exec-path-from-shell-initialize))
+
+;;packages required
 (require 'cdlatex)
-(require 'hungry-delete)
+
+;;hungry delete
+(global-hungry-delete-mode)
+
+;;company mode as global setting
+(global-company-mode t)
+
+;;swiper ivy
+(ivy-mode 1)
+(setq ivy-use-virtual-buffers t)
+
+;;yasnippet global mode
+(yas-global-mode t)
+
+;;smartparens
+(smartparens-global-mode t)
+
+;;js2-mode
+(add-to-list 'auto-mode-alist '("\\.js\\'" . js2-mode))
+(add-to-list 'auto-mode-alist '("\\.jsx?\\'" . js2-jsx-mode))
+(add-to-list 'interpreter-mode-alist '("node" . js2-jsx-mode))
 
 (provide 'init-packages)
