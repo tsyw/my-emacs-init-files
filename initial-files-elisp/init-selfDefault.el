@@ -6,7 +6,7 @@
 (delete-selection-mode 1)
 (global-auto-revert-mode t)
 (setq make-backup-files nil)
-(setq auto-save-default nil)
+(setq-default auto-save-default nil)
 (show-paren-mode t)
 
 ;;recent files
