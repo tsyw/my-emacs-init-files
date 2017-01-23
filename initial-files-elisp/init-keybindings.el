@@ -24,4 +24,8 @@
 ;;recent files keybindings
 (global-set-key (kbd "<f7>") 'recentf-open-files)
 
+;;dired-mode
+(with-eval-after-load 'dired
+  (define-key dired-mode-map (kbd "RET") 'dired-find-alternate-file))
+
 (provide 'init-keybindings)

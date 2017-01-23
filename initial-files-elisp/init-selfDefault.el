@@ -13,4 +13,10 @@
 (recentf-mode t)
 (setq recentf-max-menu-items 20)
 
+;;dired-mode
+(setq dired-recursive-copies 'always)
+(setq dired-recursive-deletes 'always)
+(put 'dired-find-alternate-file 'disabled nil)
+(require 'dired-x)
+
 (provide 'init-selfDefault)
