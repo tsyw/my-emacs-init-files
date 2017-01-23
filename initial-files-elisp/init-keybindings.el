@@ -31,4 +31,7 @@
 ;;better indent
 (global-set-key (kbd "C-M-\\") 'indent-region-or-buffer)
 
+;;hippie expand
+(global-set-key (kbd "s-/") 'hippie-expand)
+
 (provide 'init-keybindings)
