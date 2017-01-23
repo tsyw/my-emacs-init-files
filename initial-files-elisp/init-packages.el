@@ -12,7 +12,6 @@
                        yasnippet
                        org
                        auctex
-                       monokai-theme
                        hungry-delete
                        counsel
                        swiper
