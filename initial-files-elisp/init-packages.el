@@ -21,6 +21,7 @@
                        cdlatex
                        popwin
                        reveal-in-osx-finder
+                       expand-region
                        ) "Default packages")
 (setq package-selected-packages tsyw/packages)
 (defun tsyw/packages-installed-p ()

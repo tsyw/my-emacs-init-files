@@ -40,4 +40,7 @@
 ;;occur-mode enhanced
 (global-set-key (kbd "M-s o") 'occur-dwim)
 
+;;expand-region
+(global-set-key (kbd "C-=") 'er/expand-region)
+
 (provide 'init-keybindings)
