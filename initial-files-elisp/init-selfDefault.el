@@ -7,6 +7,7 @@
 (global-auto-revert-mode t)
 (setq make-backup-files nil)
 (setq-default auto-save-default nil)
+(set-language-environment "UTF-8")
 
 ;;show-paren
 (define-advice show-paren-function (:around (fn) fix-show-paren-function)

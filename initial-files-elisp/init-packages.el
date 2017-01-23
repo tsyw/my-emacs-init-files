@@ -22,6 +22,7 @@
                        popwin
                        reveal-in-osx-finder
                        expand-region
+                       iedit
                        ) "Default packages")
 (setq package-selected-packages tsyw/packages)
 (defun tsyw/packages-installed-p ()
@@ -42,6 +43,7 @@
 ;;packages required
 (require 'cdlatex)
 (require 'reveal-in-osx-finder)
+(require 'iedit)
 
 ;;hungry delete
 (global-hungry-delete-mode)
