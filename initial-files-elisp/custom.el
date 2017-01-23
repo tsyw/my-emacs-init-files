@@ -17,6 +17,8 @@
  '(inhibit-startup-screen t)
  '(initial-scratch-message nil)
  '(org-src-fontify-natively t)
+ '(popwin:popup-window-position (quote right))
+ '(popwin:popup-window-width 80)
  '(preview-image-type (quote png))
  '(reftex-allow-automatic-rescan t)
  '(reftex-enable-partial-scans t)
