@@ -7,6 +7,14 @@
 (global-auto-revert-mode t)
 (setq make-backup-files nil)
 (setq-default auto-save-default nil)
+
+;;show-paren
+(define-advice show-paren-function (:around (fn) fix-show-paren-function)
+  "Highlight enclosing parens."
+  (cond ((looking-at-p "\\s(") (funcall fn))
+        (t (save-excursion
+             (ignore-errors (backward-up-list))
+             (funcall fn)))))
 (show-paren-mode t)
 
 ;;recent files
