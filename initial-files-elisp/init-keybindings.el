@@ -43,4 +43,7 @@
 ;;expand-region
 (global-set-key (kbd "C-=") 'er/expand-region)
 
+;;counsel-imenu
+(global-set-key (kbd "M-s i") 'counsel-imenu)
+
 (provide 'init-keybindings)
