@@ -46,4 +46,7 @@
 ;;counsel-imenu
 (global-set-key (kbd "M-s i") 'counsel-imenu)
 
+;;org-capture
+(global-set-key (kbd "C-c r") 'org-capture)
+
 (provide 'init-keybindings)

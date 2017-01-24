@@ -34,5 +34,9 @@
       ("\\section{%s}" . "\\section*{%s}")
       ("\\subsection{%s}" . "\\subsection*{%s}")
       ("\\subsubsection{%s}" . "\\subsubsection*{%s}")))))
+(setq org-capture-templates
+      '(("t" "Todo" entry (file+headline "~/工作/gtd/gtd.org" "生活琐事")
+	 "* TODO [#B] %?\n  %i\n"
+	 :empty-lines 1)))
 
 (provide 'init-org)

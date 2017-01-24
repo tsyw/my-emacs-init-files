@@ -22,6 +22,7 @@
                        reveal-in-osx-finder
                        expand-region
                        iedit
+                       org-pomodoro
                        ) "Default packages")
 (setq package-selected-packages tsyw/packages)
 (defun tsyw/packages-installed-p ()
@@ -43,6 +44,7 @@
 (require 'cdlatex)
 (require 'reveal-in-osx-finder)
 (require 'iedit)
+(require 'org-pomodoro)
 
 ;;hungry delete
 (global-hungry-delete-mode)
