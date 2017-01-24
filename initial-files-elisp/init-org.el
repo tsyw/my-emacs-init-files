@@ -35,8 +35,17 @@
       ("\\subsection{%s}" . "\\subsection*{%s}")
       ("\\subsubsection{%s}" . "\\subsubsection*{%s}")))))
 (setq org-capture-templates
-      '(("t" "Todo" entry (file+headline "~/工作/gtd/gtd.org" "生活琐事")
-	 "* TODO [#B] %?\n  %i\n"
-	 :empty-lines 1)))
+      '(("t" "Todo in my life" entry (file+headline "~/工作/gtd/gtd.org" "生活琐事")
+         "* TODO [#B] %?\n  %i\n"
+         :empty-lines 1)
+        ("w" "movies or tv shows to watch" entry (file+headline "~/工作/gtd/watch.org" "要看的电影电视剧")
+         "* TODO [#B] %?\n %i\n"
+         :empty-lines 1)
+        ("b" "books to read" entry (file+headline "~/工作/gtd/book.org" "要看的书")
+         "* TODO [#B] %?\n %i\n"
+         :empty-lines 1)
+        ("l" "url to learn" entry (file+headline "~/工作/gtd/learning.org" "要学习的东西")
+         "* TODO [#B] %?\n %i\n"
+         :empty-lines 1)))
 
 (provide 'init-org)
