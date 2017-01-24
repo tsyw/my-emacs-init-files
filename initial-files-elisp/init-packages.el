@@ -1,5 +1,5 @@
 ;;package source and auto-install missing packages
-(require 'package) 
+(require 'package)
 (add-to-list 'package-archives
              '("melpa" . "http://mirrors.tuna.tsinghua.edu.cn/elpa/melpa/"))
 (when (< emacs-major-version 24)
