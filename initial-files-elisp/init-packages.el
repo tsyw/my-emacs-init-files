@@ -23,6 +23,7 @@
                        expand-region
                        iedit
                        org-pomodoro
+                       flycheck
                        ) "Default packages")
 (setq package-selected-packages tsyw/packages)
 (defun tsyw/packages-installed-p ()
@@ -45,6 +46,9 @@
 (require 'reveal-in-osx-finder)
 (require 'iedit)
 (require 'org-pomodoro)
+
+;;flycheck
+(global-flycheck-mode t)
 
 ;;hungry delete
 (global-hungry-delete-mode)
