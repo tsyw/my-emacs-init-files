@@ -24,6 +24,8 @@
                        iedit
                        org-pomodoro
                        flycheck
+                       which-key
+                       window-numbering
                        ) "Default packages")
 (setq package-selected-packages tsyw/packages)
 (defun tsyw/packages-installed-p ()
@@ -46,6 +48,12 @@
 (require 'reveal-in-osx-finder)
 (require 'iedit)
 (require 'org-pomodoro)
+
+;;window-numbering-mode
+(window-numbering-mode 1)
+
+;;which-key
+(which-key-mode 1)
 
 ;;flycheck
 (global-flycheck-mode t)
