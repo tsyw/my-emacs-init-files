@@ -26,6 +26,9 @@
                        flycheck
                        which-key
                        window-numbering
+                       spacemacs-theme
+                       spaceline
+                       nyan-mode
                        ) "Default packages")
 (setq package-selected-packages tsyw/packages)
 (defun tsyw/packages-installed-p ()
@@ -48,6 +51,7 @@
 (require 'reveal-in-osx-finder)
 (require 'iedit)
 (require 'org-pomodoro)
+(require 'spaceline-config)
 
 ;;window-numbering-mode
 (window-numbering-mode 1)

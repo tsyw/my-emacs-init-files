@@ -5,5 +5,7 @@
 (tool-bar-mode -1)
 (global-hl-line-mode 1)
 (scroll-bar-mode -1)
-
+(load-theme 'spacemacs-light t)
+(nyan-mode)
+(spaceline-spacemacs-theme)
 (provide 'init-theme)

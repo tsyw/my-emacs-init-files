@@ -13,6 +13,9 @@
  '(company-idle-delay 0.08)
  '(company-minimum-prefix-length 3)
  '(custom-buffer-indent 4)
+ '(custom-safe-themes
+   (quote
+    ("bffa9739ce0752a37d9b1eee78fc00ba159748f50dc328af4be661484848e476" "fa2b58bb98b62c3b8cf3b6f02f058ef7827a8e497125de0254f56e373abee088" default)))
  '(global-highlight-changes-mode nil)
  '(indent-tabs-mode nil)
  '(inhibit-startup-screen t)
