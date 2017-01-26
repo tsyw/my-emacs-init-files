@@ -47,7 +47,7 @@
 (global-set-key (kbd "M-s i") 'counsel-imenu)
 
 ;;org-capture
-(global-set-key (kbd "C-c r") 'org-capture)
+(global-set-key (kbd "C-c c") 'org-capture)
 
 ;;modify company key map
 (with-eval-after-load 'company
