@@ -1,10 +1,10 @@
 ;;; reveal-in-osx-finder-autoloads.el --- automatically extracted autoloads
 ;;
 ;;; Code:
-(add-to-list 'load-path (directory-file-name (or (file-name-directory #$) (car load-path))))
+(add-to-list 'load-path (or (file-name-directory #$) (car load-path)))
 
 ;;;### (autoloads nil "reveal-in-osx-finder" "reveal-in-osx-finder.el"
-;;;;;;  (22662 10721 0 0))
+;;;;;;  (23065 17648 158239 961000))
 ;;; Generated autoloads from reveal-in-osx-finder.el
 
 (autoload 'reveal-in-osx-finder "reveal-in-osx-finder" "\

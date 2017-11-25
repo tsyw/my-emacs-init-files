@@ -10,12 +10,12 @@
 (set-language-environment "UTF-8")
 
 ;;show-paren
-(define-advice show-paren-function (:around (fn) fix-show-paren-function)
-  "Highlight enclosing parens."
-  (cond ((looking-at-p "\\s(") (funcall fn))
-        (t (save-excursion
-             (ignore-errors (backward-up-list))
-             (funcall fn)))))
+(defadvice show-paren-function (around fix-show-paren-function activate)
+  (cond ((looking-at-p "\\s(") ad-do-it)
+	(t (save-excursion
+	     (ignore-errors (backward-up-list))
+	     ad-do-it)))
+  )
 (show-paren-mode t)
 
 ;;recent files

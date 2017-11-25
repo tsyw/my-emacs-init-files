@@ -1,9 +1,10 @@
 ;;; cdlatex-autoloads.el --- automatically extracted autoloads
 ;;
 ;;; Code:
-(add-to-list 'load-path (directory-file-name (or (file-name-directory #$) (car load-path))))
+(add-to-list 'load-path (or (file-name-directory #$) (car load-path)))
 
-;;;### (autoloads nil "cdlatex" "cdlatex.el" (22657 44807 0 0))
+;;;### (autoloads nil "cdlatex" "cdlatex.el" (23065 17647 186259
+;;;;;;  658000))
 ;;; Generated autoloads from cdlatex.el
 
 (autoload 'turn-on-cdlatex "cdlatex" "\
